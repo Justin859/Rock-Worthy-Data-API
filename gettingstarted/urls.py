@@ -13,5 +13,6 @@ import rockworthy.views
 urlpatterns = [
     url(r'^$', rockworthy.views.index, name='index'),
     url(r'^db', rockworthy.views.db, name='db'),
+    url(r'^api', rockworthy.views.test, name='test'),
     path('admin/', admin.site.urls),
 ]

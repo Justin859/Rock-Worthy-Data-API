@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 
 from .models import Greeting
 
@@ -18,3 +18,8 @@ def db(request):
 
     return render(request, 'db.html', {'greetings': greetings})
 
+def test(request):
+
+    response_data = {'name': 'Test Response Successful'}
+
+    return JsonResponse(response_data)
